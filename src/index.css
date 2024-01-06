@@ -43,7 +43,7 @@ body {
 
 .appInnerContainer {
   background: var(--bg-url) no-repeat fixed center center;
-  background-size: auto;
+  background-size: 75%;
   height: 100%;
   width: 100%;
   display: flex;
@@ -99,6 +99,7 @@ body {
   align-items: center;
   position: relative;
   padding-right: 20px;
+  margin-bottom: 20px;
 }
 .button {
   position: relative;
