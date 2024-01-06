@@ -3,15 +3,16 @@
 :root {
   --bg-url: url("../public/Backgrounds/flower-7061254.svg");
   --photo-url: url("../public/Photos/Nikhil & Karishma-1571.jpg");
+  --primary: rgb(0, 0, 0);
+  --seconday: rgb(255, 255, 255);
+
+  /* --transparent-white: rgba(255, 255, 255, 0);
+  --transparent-black: rgba(0, 0, 0, 0); */
   font-family: 'Cormorant Garamond', serif;
 }
 
 body {
-  /* background: #fff url('../public/Backgrounds/floral-5244930.svg') no-repeat fixed center center;
-  background-size: cover; */
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
@@ -25,7 +26,7 @@ body {
   align-items: center;
   background: var(--photo-url) no-repeat fixed center center;
   background-size: auto;
-  z-index: -100;
+  z-index: 0;
   position: relative;
 }
 
@@ -37,11 +38,10 @@ body {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.9) 100%); /* Circular cutout */
-  z-index: 1; /* Place the overlay above the background image */
+  z-index: 0; /* Place the overlay above the background image */
 }
 
 .appInnerContainer {
-  /* background: #fff url('../public/Backgrounds/floral-5244930.svg') no-repeat fixed center center; */
   background: var(--bg-url) no-repeat fixed center center;
   background-size: auto;
   height: 100%;
@@ -49,16 +49,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 80%;
-  width: 80%; */
+  position: relative;
+  z-index: 20;
 }
 
 .appContents {
-  /* height: 80%; */
   background: #00000085;
   width: 100vw;
   margin-top: 10%;
-  z-index: -1;
+  position: relative;
+  z-index: 10;
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -71,10 +71,6 @@ body {
   align-items: center;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 .title {
   margin: 20px 0px;
   text-align: center;
@@ -90,10 +86,6 @@ body {
 
 .photo {
   width: 60%;
-  /* height: '300px'; */
-  /* border-radius: '10px';
-  box-shadow: '0 4px 8px rgba(0, 0, 0, 0.1)';
-  margin: '0 auto 20px'; */
 }
 
 
@@ -102,13 +94,10 @@ body {
 /* ******* */
 
 .buttonContainer {
-  margin: 0px 0%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 100;
   padding-right: 20px;
 }
 .button {
@@ -118,7 +107,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 48px;
-  /* width: 160px; */
   min-width: 240px;
   margin: 0px 5px;
   cursor: pointer;
@@ -130,7 +118,7 @@ body {
 }
 
 .button span {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   top: 4px;
@@ -138,28 +126,65 @@ body {
   bottom: 4px;
   left: 4px;
   text-align: center;
-  /* background: #2e2e2e; */
   background: #0000008e;
   color: rgba(255, 255, 255, 0.781);
   transition: 0.5s;
   z-index: 9999;
 }
 
-/* .button:hover span { */
 span:hover {
-  color: rgb(141, 33, 33);
+  color: rgb(220, 168, 58);
   cursor: pointer;
 }
 
-/* .button::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-size: 400%;
-  opacity: 0;
-  transition: 0.5s;
-  animation: animate123 20% linear infinte;
-} */
+
+@media only screen and (max-width: 600px) {
+  /* :root { */
+    /* color: var(--secondary); */
+  /* } */
+
+  .appOuterContainer {
+    height: 100vh;
+    width: 100vw;
+    background: var(--photo-url) no-repeat fixed center center;
+    background-size: contain;
+  }
+  .appOuterContainer::before {
+    background: linear-gradient(to bottom, var(--primary) 35%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, var(--primary) 65%);
+
+  }
+
+  .appContents {
+    font-size: 20px;
+    margin-top: 0px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+  }
+
+  .title {
+    margin-top: 10%;
+    color: var(--seconday);
+    
+  }
+
+  .buttonContainer {
+    flex-direction: row;
+    bottom: 10px;
+    /* position: absolute; */
+    padding-right: 0px;
+    margin-bottom: 10%;
+    font-size: 2em;
+  }
+
+  .button {
+    min-width: 150px;
+    margin: 5px;
+    font-size: 0.4em;
+    line-height: 1.5em;
+    word-wrap: no-break;
+  }
+}
