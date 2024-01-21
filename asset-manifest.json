@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/NikhilAndKarishmaWedding/static/css/main.7f672b57.css",
-    "main.js": "/NikhilAndKarishmaWedding/static/js/main.4e0bff19.js",
+    "main.css": "/NikhilAndKarishmaWedding/static/css/main.cc63d58f.css",
+    "main.js": "/NikhilAndKarishmaWedding/static/js/main.013f421a.js",
     "static/js/787.48382833.chunk.js": "/NikhilAndKarishmaWedding/static/js/787.48382833.chunk.js",
     "static/media/Nikhil & Karishma-1571.jpg": "/NikhilAndKarishmaWedding/static/media/Nikhil & Karishma-1571.18381fdaeae13479d206.jpg",
     "static/media/flower-7061254.svg": "/NikhilAndKarishmaWedding/static/media/flower-7061254.002d21cde0641e0e25d6.svg",
     "index.html": "/NikhilAndKarishmaWedding/index.html",
-    "main.7f672b57.css.map": "/NikhilAndKarishmaWedding/static/css/main.7f672b57.css.map",
-    "main.4e0bff19.js.map": "/NikhilAndKarishmaWedding/static/js/main.4e0bff19.js.map",
+    "main.cc63d58f.css.map": "/NikhilAndKarishmaWedding/static/css/main.cc63d58f.css.map",
+    "main.013f421a.js.map": "/NikhilAndKarishmaWedding/static/js/main.013f421a.js.map",
     "787.48382833.chunk.js.map": "/NikhilAndKarishmaWedding/static/js/787.48382833.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f672b57.css",
-    "static/js/main.4e0bff19.js"
+    "static/css/main.cc63d58f.css",
+    "static/js/main.013f421a.js"
   ]
 }
