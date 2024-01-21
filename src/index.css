@@ -18,6 +18,12 @@ body {
   color: white;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
 .appOuterContainer {
   height: 100vh;
   width: 100vw;
@@ -177,7 +183,7 @@ span:hover {
     bottom: 10px;
     /* position: absolute; */
     padding-right: 0px;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     font-size: 2em;
   }
 
@@ -186,6 +192,79 @@ span:hover {
     margin: 5px;
     font-size: 0.4em;
     line-height: 1.5em;
+    word-wrap: no-break;
+  }
+}
+
+/* Chat gpt below lol  */
+
+.button {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 48px;
+  min-width: 240px;
+  margin: 0px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 55px;
+  border: 2px white solid;
+  -webkit-box-reflect: bottom 1px linear-gradient(transparent, #0004);
+  z-index: 9999;
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center vertically */
+}
+
+.button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #0000008e;
+  color: rgba(255, 255, 255, 0.781);
+  transition: 0.5s;
+  z-index: 9999;
+  flex: 1; /* Allow the text to expand vertically */
+}
+
+span:hover {
+  color: rgb(220, 168, 58);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .appContents {
+    /* font-size: 20px; */
+    margin-top: 0px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+  }
+
+  .title {
+    /* margin-top: 10%; */
+    color: var(--seconday);
+  }
+
+  .buttonContainer {
+    flex-direction: column; /* Stack buttons vertically */
+    /* bottom: 10px; */
+    padding-right: 0px;
+    margin-bottom: 6%;
+    /* font-size: 2em; */
+  }
+
+  .button {
+    min-width: 100%; /* Full width for small screens */
+    margin: 5px 0; /* Adjust margin for stacking */
+    font-size: 0.5em;
+    /* line-height: 1.5em; */
     word-wrap: no-break;
   }
 }

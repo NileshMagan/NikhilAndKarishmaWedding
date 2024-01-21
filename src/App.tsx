@@ -5,11 +5,11 @@ const App: React.FC = () => {
   const headingTitle = "Nikhil & Karishma";
   const weddingInfoButton = {
     url: "https://www.theknot.com/us/nikhil-magan-and-karishma-hari-jan-2024",
-    buttonName: "To Wedding Site",
+    buttonName: "Wedding Website",
   };
 
   const photoStorageInfoButton = {
-    url: "https://onedrive.live.com/?id=2F9ECF7A82E448A9%21933&cid=2F9ECF7A82E448A9",
+    url: "https://bit.ly/NikhilAndKarishma",
     buttonName: "Upload Photos",
   };
 
