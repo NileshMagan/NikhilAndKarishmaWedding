@@ -133,7 +133,7 @@ html, body {
   bottom: 4px;
   left: 4px;
   text-align: center;
-  background: #0000008e;
+  /* background: #0000008e; */
   color: rgba(255, 255, 255, 0.781);
   transition: 0.5s;
   z-index: 9999;
@@ -157,7 +157,7 @@ span:hover {
     background-size: contain;
   }
   .appOuterContainer::before {
-    background: linear-gradient(to bottom, var(--primary) 35%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, var(--primary) 65%);
+    background: linear-gradient(to bottom, var(--primary) 37.5%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, var(--primary) 62.5%);
 
   }
 
@@ -256,7 +256,7 @@ span:hover {
     flex-direction: column; /* Stack buttons vertically */
     /* bottom: 10px; */
     padding-right: 0px;
-    margin-bottom: 6%;
+    margin-bottom: 2.3em;
     /* font-size: 2em; */
   }
 
@@ -266,5 +266,6 @@ span:hover {
     font-size: 0.5em;
     /* line-height: 1.5em; */
     word-wrap: no-break;
+    padding: 0px 0.8em;
   }
 }
